@@ -1,0 +1,14 @@
+{
+	"name": "Groundwork",
+	"shortDescription": "A front-end development template built with 11ty, PostCSS, Rollup and hosted with Netlify",
+	"url": "https://localhost",
+	"authorEmail": "hello@roboticdinosaur.co.uk",
+	"authorName": "RoboticDinosaur",
+	"analytics": {
+		"google": {
+			"enabled": true,
+			"id": "xxxxxx"
+		}
+	},
+	"maxPostsPerPage": 10
+}

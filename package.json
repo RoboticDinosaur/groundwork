@@ -1,0 +1,68 @@
+{
+  "name": "Groundwork",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:css": "postcss src/css/style.css --no-map -o dist/css/style.css -w",
+    "watch:js": "rollup -c -w",
+    "watch:eleventy": "eleventy --serve",
+    "build:clean": "rm -rf ./dist",
+    "build:css": "postcss src/css/style.css --no-map -o dist/css/style.css",
+    "build:eleventy": "eleventy",
+    "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r",
+    "start": "cross-env ELEVENTY_ENV=dev npm-run-all build:css --parallel watch:*",
+    "build": "cross-env ELEVENTY_ENV=prod npm-run-all build:* social-images",
+    "lint": "stylelint 'src/css/**/*.css'",
+    "lint:fix": "stylelint --fix 'src/css/**/*.css'",
+    "social:css": "postcss src/css/social.css --no-map -o social/style.css",
+    "social:images": "eleventy-social-images --outputDir public --dataFile social/pages.json --templatePath social/template.html",
+    "bump": "npm --no-git-tag-version version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roboticdinosaur/groundwork.git"
+  },
+  "keywords": [],
+  "author": "Robert Forbes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roboticdinosaur/groundwork/issues"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-plugin-rss": "^1.1.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.0",
+    "@11tyrocks/eleventy-plugin-social-images": "^0.1.3",
+    "@rollup/plugin-commonjs": "^19.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.0",
+    "@rollup/plugin-replace": "^2.4.2",
+    "autoprefixer": "^9.8.6",
+    "cookies-eu-banner": "^2.0.1",
+    "cross-env": "^7.0.3",
+    "cssnano": "^4.1.10",
+    "dotenv": "^8.2.0",
+    "emoji-regex": "^9.2.2",
+    "luxon": "^1.26.0",
+    "markdown-it": "^11.0.1",
+    "markdown-it-anchor": "^5.2.7",
+    "normalize.css": "^8.0.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.2",
+    "postcss-import": "^12.0.1",
+    "postcss-preset-env": "^6.7.0",
+    "rollup": "^2.48.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "sass": "^1.32.8",
+    "stylelint": "^13.12.0",
+    "stylelint-a11y": "^1.2.3",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-selector-bem-pattern": "^2.1.0"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}
