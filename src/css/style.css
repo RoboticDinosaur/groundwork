@@ -4,3 +4,8 @@
  * layouts/
  * vendor/
  */
+
+input:not([type='checkbox'], [type='radio']) {
+	padding: 0.5em;
+	width: 16em;
+}
