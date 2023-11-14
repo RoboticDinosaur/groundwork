@@ -1,6 +1,6 @@
 {
-  "name": "Groundwork",
-  "version": "0.1.0",
+  "name": "groundwork",
+  "version": "0.2.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -30,7 +30,7 @@
     "url": "https://github.com/roboticdinosaur/groundwork/issues"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-plugin-rss": "^1.1.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.0",
     "@11tyrocks/eleventy-plugin-social-images": "^0.1.3",
